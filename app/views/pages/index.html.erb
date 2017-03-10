@@ -1,0 +1,134 @@
+<div class="container-fluid">
+
+  <!-- Header section with name and image -->
+  <div class="header-section">
+    <div class="heading">
+      <h1 class="white-text"><p>Hannah</p>
+        <p>Thompson<p></h1>
+      <h3 class="darkblue-text">full stack developer</h3>
+    </div>
+
+    <div class="headerimg">
+      <img src="assets/hannah.png">
+    </div>
+    <div class="down-arrow"><a href="#about"><span class="glyphicon glyphicon-chevron-down"></span></a></div>
+  </div>
+
+  <!-- Buffer to give space for about section to move into -->
+  <div class="header-buffer"  id="about"></div>
+
+  <!-- Combined about and portfolio section to get backgrounds working -->
+  <div class="about-portfolio-section">
+    &nbsp;
+    <div class="about-section text-center">
+      <h2 class="darkblue-text no-transform">Hi, I'm Hannah!</h2>
+      <div class="text-justify">
+      <p>I am a full stack developer with skills in html, css, ruby on rails, python and Go.
+         I am community minded and love attending and speaking at meetups and conferences.</p>
+      <p>In my previous career I was a scientist, I have a PhD in potato diseases of all things. While I still love science, it turns out I'm born to be a developer
+         and now I spend my days writing code rather than wearing a labcoat (though I still own the coat).</p>
+      <p>When I'm not coding I can be found recording my podcast, eating brunch, drinking coffee and walking around
+         Sydney's inner west looking for dogs to pat.</p>
+      <p>I'm a strong communicator, I love helping people and I thrive in a busy environment. If you think I'd
+         be a good fit for your team don't hesistate to get in touch.</p>
+       </div>
+    </div>
+    <span id="portfolio"></span>
+    <h2 class="darkblue-text text-center extra-margin">PORTFOLIO</h2>
+    <div class="portfolio-section">
+      <% @portfolio.each do |item| %>
+        <div class="portfolio-card text-center">
+          <div class="portfolio-img-container text-center">
+            <img src=<%= asset_path "#{item[:imgurl]}" %> class="portfolio-img hidden-sm hidden-xs" data-toggle="modal" data-target=#<%= "#{item[:short]}" %>>
+            <img src=<%= asset_path "#{item[:imgurl]}" %> class="portfolio-img hidden-lg hidden-md">
+          </div>
+          <h4><%= "#{item[:header]}" %></h4>
+          <p><%= "#{item[:description]}" %></p>
+            <div class="modal fade" id=<%= "#{item[:short]}" %> tabindex="-1" aria-labelledby=<%= "#{item[:short]}" %>>
+              <img class="imagemodal" src=<%= asset_path "#{item[:imgurl]}" %>>
+            </div>
+          <p><button type="button" class="btn btn-default">On GitHub</button></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="community-section text-center" id="community">
+    <h2 class="darkblue-text">COMMUNITY</h2>
+    <div class="community-section-flex">
+      <% @community.each do |item| %>
+        <div class="portfolio-card text-center">
+          <div class="community-img-container text-center">
+            <img src=<%= asset_path "#{item[:imgurl]}" %> class="portfolio-img">
+          </div>
+          <h4><%= "#{item[:header]}" %></h4>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="achievement-section" id="achievements">
+    <h2 class="darkblue-text">ACHIEVEMENTS</h2>
+    <div class="achievement-section-flex">
+      <% @achievements.each do |item| %>
+        <div class="circle"><%= "#{item[:abbrev]}" %></div>
+        <div class="achievement-text">
+          <p><%= "#{item[:where]}" %></p>
+          <p><%= "#{item[:what]}" %></p>
+        </div>
+        <div class="achievement-text-break"></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="skills-section text-center">
+    <h2 id="skills">SKILLS</h2>
+    <div class="skills-section-flex">
+
+      <% @skills.each do |item| %>
+        <div class="portfolio-card skills-card">
+          <i class="devicon-<%= "#{item[:linktext]}" %> colored icon"></i>
+          <div class="skills-rating-empty">
+            <div class="skills-rating-filled" style="width: <%= "#{item[:ability]}" %>%">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="speaking-section" id="speaking">
+    <h2 class="darkblue-text">SPEAKING</h2>
+    <div class="portfolio-section">
+    <% @speaking.each do |item| %>
+      <div class="portfolio-card text-center">
+        <div class="portfolio-img-container speaking-img-container text-center">
+          <img src=<%= asset_path "#{item[:imgurl]}" %> class="portfolio-img">
+        </div>
+        <h4><%= "#{item[:header]}" %></h4>
+        <p><%= "#{item[:title]}" %></p>
+        <p><%= "#{item[:conf]}" %></p>
+        <p><%= "#{item[:year]}" %></p>
+        <p><%= "#{item[:description]}" %></p>
+        <% if item.key?(:linktext) %>
+          <p><a href="<%= "#{item[:linkurl]}" %>" target="_blank">
+            <button type="button" class="btn btn-default"><%= "#{item[:linktext]}" %></button></a></p>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+  <div class="social-section text-center">
+    <h2 id="contact">Get in touch!</h2>
+
+    <i class="fa fa-twitter socialicon" aria-hidden="true"></i>
+    <i class="fa fa-github socialicon" aria-hidden="true"></i>
+    <i class="fa fa-linkedin socialicon" aria-hidden="true"></i>
+    <i class="fa fa-rss socialicon" aria-hidden="true"></i>
+    <i class="fa fa-envelope-o socialicon" aria-hidden="true"></i>
+
+    <div class="social-section-flex">
+      <img src=<%= asset_path "waving.gif" %> class="waving">
+    </div>
+  </div>
+</div>
