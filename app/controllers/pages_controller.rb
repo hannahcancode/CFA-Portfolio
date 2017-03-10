@@ -11,10 +11,10 @@ class PagesController < ApplicationController
         imgurl: "portfolio.png",
         header: "Portfolio",
         description: "This page you're looking at. Inception!",
-        short: "portfolio"
+        short: "port"
       },
       {
-        imgurl: "csszen.png",
+        imgurl: "csszen.jpg",
         header: "CSS Zen Garden",
         description: "My design for CSS Zen Garden",
         short: "zen"
@@ -68,7 +68,7 @@ class PagesController < ApplicationController
         description: "Arduino isn't scary - a talk to encourage women into arduino from the point of view of a beginner",
       },
       {
-        imgurl: "LCA.png",
+        imgurl: "LCA.jpg",
         title: "Hannah Gets Go-ing",
         conf: "WOOTConf miniconf at Linux Conf",
         year: "January 2017",
