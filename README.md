@@ -2,7 +2,7 @@
 
 This portfolio was developed for the first major assignment at Coder Factory Academy.
 
-![Portfolio screenshot]("https://raw.githubusercontent.com/hannahcancode/CFA-Portfolio/master/app/assets/images/portfolio-min.png")
+![Portfolio screenshot](app/assets/images/portfolio-min.png)
 
 ## Project Requirements
 
