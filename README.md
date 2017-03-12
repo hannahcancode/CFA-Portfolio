@@ -4,6 +4,8 @@ This portfolio was developed for the first major assignment at Coder Factory Aca
 
 ![Portfolio screenshot](app/assets/images/portfolio-min.png)
 
+The site has been deployed to Heroku. You can view it at [hannahportfolio.heroku.com]("http://hannahportfolio.heroku.com")
+
 ## Project Requirements
 
 * Built in Ruby on Rails
