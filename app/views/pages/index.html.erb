@@ -23,14 +23,17 @@
     <div class="about-section text-center">
       <h2 class="darkblue-text no-transform">Hi, I'm Hannah!</h2>
       <div class="text-justify">
-      <p>I am a full stack developer with skills in html, css, ruby on rails, python and Go.
-         I am community minded and love attending and speaking at meetups and conferences.</p>
+      <p>I am a full stack developer with <a href="#skills">skills</a> in html, css, ruby on rails, python and go.
+        I'm also a really good learner and can pick up things very quickly. If you don't work in these languages I'd
+        still love to see if we can work together.</p>
+      <p>I am community minded and love attending and speaking at meetups and conferences. Since moving to Sydney last year
+         I've been really supported by the Sydney Women in Tech community, and am always looking for opportunities to give back.</p>
       <p>In my previous career I was a scientist, I have a PhD in potato diseases of all things. While I still love science, it turns out I'm born to be a developer
          and now I spend my days writing code rather than wearing a labcoat (though I still own the coat).</p>
       <p>When I'm not coding I can be found recording my podcast, eating brunch, drinking coffee and walking around
          Sydney's inner west looking for dogs to pat.</p>
       <p>I'm a strong communicator, I love helping people and I thrive in a busy environment. If you think I'd
-         be a good fit for your team don't hesistate to get in touch.</p>
+         be a good fit for your team don't hesistate to <a href="#contact">get in touch.</a></p>
        </div>
     </div>
     <span id="portfolio"></span>
@@ -47,7 +50,7 @@
             <div class="modal fade" id=<%= "#{item[:short]}" %> tabindex="-1" aria-labelledby=<%= "#{item[:short]}" %>>
               <img class="imagemodal" src=<%= asset_path "#{item[:imgurl]}" %>>
             </div>
-          <p><button type="button" class="btn btn-default">On GitHub</button></p>
+          <p><a href="<%= "#{item[:url]}" %>" target="_blank"><button type="button" class="btn btn-default"><%= "#{item[:urltext]}" %></button></a></p>
         </div>
       <% end %>
     </div>
@@ -120,13 +123,9 @@
 
   <div class="social-section text-center">
     <h2 id="contact">Get in touch!</h2>
-
-    <i class="fa fa-twitter socialicon" aria-hidden="true"></i>
-    <i class="fa fa-github socialicon" aria-hidden="true"></i>
-    <i class="fa fa-linkedin socialicon" aria-hidden="true"></i>
-    <i class="fa fa-rss socialicon" aria-hidden="true"></i>
-    <i class="fa fa-envelope-o socialicon" aria-hidden="true"></i>
-
+    <% @contact.each do |item| %>
+      <a href="<%= "#{item[:url]}" %>" target="_blank"><i class="fa <%= "#{item[:linktext]}" %> socialicon" aria-hidden="true"></i></a>
+    <% end %>
     <div class="social-section-flex">
       <img src=<%= asset_path "waving.gif" %> class="waving">
     </div>

@@ -5,25 +5,41 @@ class PagesController < ApplicationController
         imgurl: "caffeinequest.png",
         header: "Caffeine Quest",
         description: "An 80s style text adventure that will test your Ruby knowledge",
-        short: "caffeine"
+        short: "caffeine",
+        url: "https://github.com/advaitju/CFA-Project-Caffeine-Quest",
+        urltext: "On GitHub"
       },
       {
         imgurl: "portfolio.png",
         header: "Portfolio",
-        description: "This page you're looking at. Inception!",
-        short: "port"
+        description: "This page you're looking at. Inception! You can see the code on GitHub.",
+        short: "port",
+        url: "https://github.com/hannahcancode/CFA-Portfolio",
+        urltext: "On GitHub"
       },
       {
         imgurl: "csszen.jpg",
         header: "CSS Zen Garden",
         description: "My design for CSS Zen Garden",
-        short: "zen"
+        short: "zen",
+        url: "https://github.com/hannahcancode/CFA-CSS-Zen-Garden",
+        urltext: "On GitHub"
+      },
+      {
+        imgurl: "blog.png",
+        header: "Blog",
+        description: "I keep a blog of my code adventure",
+        short: "blog",
+        url: "https://hannahcancode.github.io/",
+        urltext: "On GitHub Pages"
       },
       {
         imgurl: "arduino.jpg",
         header: "Arduino",
         description: "I play with Arduinos",
-        short: "arduino"
+        short: "arduino",
+        url: "https://github.com/hannahcancode/go",
+        urltext: "On GitHub"
       }
     ]
 
@@ -42,7 +58,11 @@ class PagesController < ApplicationController
       },
       {
         imgurl: "gopher.png",
-        header: "Go Meetup",
+        header: "Go Sydney",
+      },
+      {
+        imgurl: "pyladies.jpg",
+        header: "PyLadies Sydney",
       }
     ]
 
@@ -129,6 +149,30 @@ class PagesController < ApplicationController
       },
 
     ]
+
+    @contact = [
+      {
+        linktext: "fa-twitter",
+        url: "https://twitter.com/hannahcancode"
+      },
+      {
+        linktext: "fa-github",
+        url: "https://github.com/hannahcancode/"
+      },
+      {
+        linktext: "fa-linkedin",
+        url: "https://linkedin.com/in/hannahcodes"
+      },
+      {
+        linktext: "fa-rss",
+        url: "https://hannahcancode.github.io"
+      },
+      {
+        linktext: "fa-envelope-o",
+        url: "mailto:thompson.h+portfolio@gmail.com"
+      },
+    ]
+
   end
 
   def about

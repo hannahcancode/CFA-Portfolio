@@ -2,13 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$light-green: RGBA(160, 224, 197, 1.00);
+$old-light-green: RGBA(152, 212, 186, 1.00);
+$almost-white: RGBA(250, 250, 250, 1.00);
+$dark-blue: RGBA(53, 81, 89, 1.00);
+$highlight-green: RGBA(181, 254, 224, 1.00);
+$pink: RGBA(241, 212, 214, 1.00);
+$yellow: RGBA(238, 226, 137, 1.00);
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
 
 a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover {
-  color: RGBA(53, 81, 89, 1.00)
+  color: $dark-blue
+}
+
+p > a {
+  color: $dark-blue;
+  text-decoration: underline;
 }
 
 .navbar .navbar-nav {
@@ -19,9 +32,9 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 
 .navbar-default {
   // margin-bottom: 0px;
-  background-color: RGBA(152, 212, 186, 1);
+  background-color: $light-green;
   border: none;
-  color: RGBA(53, 81, 89, 1.00);
+  color:$dark-blue;
 }
 
 .navbar .navbar-collapse {
@@ -29,7 +42,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .header-section {
-  background-color: RGBA(152, 212, 186, 1.00);
+  background-color: $light-green;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -42,21 +55,21 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .headerimg {
-  -webkit-filter: drop-shadow(0px 0px 20px RGBA(181, 254, 224, 1.00));
-  filter: drop-shadow(0px 0px 20px RGBA(181, 254, 224, 1.00));
+  -webkit-filter: drop-shadow(0px 0px 20px $highlight-green);
+  filter: drop-shadow(0px 0px 20px $highlight-green);
 }
 .heading, .headerimg {
   padding-left: 80px;
   padding-right: 80px;
 }
 .header-buffer {
-  background-color: RGBA(152, 212, 186, 1.00);
+  background-color: $light-green;
   height: 300px;
   width: 100vw;
 }
 
 .about-section {
-  background-color: RGBA(250, 250, 250, 1.00);
+  background-color: $almost-white;
   width: 65vw;
   margin: auto;
   margin-top: -260px;
@@ -73,7 +86,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .about-portfolio-section {
-  background: linear-gradient(RGBA(240, 223, 98, 0.95), RGBA(240, 223, 98, 0.98)),url(<%= asset_path "tile.png" %>);
+  background: linear-gradient(RGBA(238, 226, 137, 0.95), RGBA(238, 226, 137, 0.98)),url(<%= asset_path "tile.png" %>);
 }
 
 .extra-margin {
@@ -99,7 +112,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 	width: -webkit-min-content;
   width: min-content;
   margin: 10px;
-  background-color: RGBA(245, 245, 245, 1.00);
+  background-color: $almost-white;
   text-align: center;
   padding: 10px;
   overflow-x: hidden;
@@ -115,7 +128,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 
 .portfolio-img-container {
   height: 250px;
-  background-color: RGBA(245, 245, 245, 1.00);
+  background-color: $almost-white;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -130,7 +143,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .community-section {
-  background-color: RGBA(250, 250, 250, 1.00);
+  background-color: $almost-white;
   // padding-top: 20px;
   padding-bottom:20px;
 }
@@ -148,14 +161,14 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 
 .community-img-container {
   height: 150px;
-  background-color: RGBA(245, 245, 245, 1.00);
+  background-color: $almost-white;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
 
 .achievement-section {
-  background-color: RGBA(241, 212, 214, 1.00);
+  background-color: $pink;
   background: linear-gradient(RGBA(241, 212, 214, 0.98), RGBA(241, 212, 214, 0.95)),url(<%= asset_path "tile.png" %>);
 
   text-align: center;
@@ -196,7 +209,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .speaking-section {
-  background-color: RGBA(240, 223, 98, 1);
+  background-color: $yellow;
   text-align: center;
   padding: 0px 20px;
 }
@@ -206,7 +219,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 }
 
 .skills-section {
-  background-color: RGBA(250, 250, 250, 1.00);
+  background-color: $almost-white;
   padding-bottom: 20px;
 
   // height: 400px;
@@ -254,7 +267,7 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 
 .social-section {
 
-  background-color: RGBA(160, 224, 197, 1.00);
+  background-color: $light-green;
   padding: 20px 20px;
 }
 
@@ -268,8 +281,8 @@ a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:ho
 
 .waving {
   height: 70%;
-  -webkit-filter: drop-shadow(0px 0px 10px RGBA(181, 254, 224, 1.00));
-  filter: drop-shadow(0px 0px 10px RGBA(181, 254, 224, 1.00));
+  -webkit-filter: drop-shadow(0px 0px 10px $highlight-green);
+  filter: drop-shadow(0px 0px 10px $highlight-green);
 }
 
 .modal.fade.in, .modal {
@@ -286,19 +299,19 @@ img.imagemodal {
 }
 
 .darkblue-text {
-  color: RGBA(53, 81, 89, 1.00)
+  color: $dark-blue
 }
 
 .white-text {
-  color: RGBA(256, 256, 256, 1.00)
+  color: $almost-white
 }
 
 .btn-default {
-  color: RGBA(53, 81, 89, 1.00);
-  border-color: RGBA(53, 81, 89, 1.00);
+  color: $dark-blue;
+  border-color: $dark-blue;
   box-shadow: none;
   text-shadow: none;
-  background: rgba(255, 0, 255, 0);
+  background: transparent;
   padding: auto;
   border-radius: 15px;
 
@@ -321,6 +334,12 @@ h2 {
   padding-top: 20px;
 }
 
+@media (max-width: 800px) {
+    .skills-card {
+      flex-basis: 100%;
+    }
+}
+
 @media (max-width: 500px) {
   .about-section {
     width: 90vw;
@@ -338,10 +357,6 @@ h2 {
 
   .modal-backdrop, .modal, .model.fade.in {
     display:none
-  }
-
-  .skills-card {
-    flex-basis: 100%;
   }
 
   i {
