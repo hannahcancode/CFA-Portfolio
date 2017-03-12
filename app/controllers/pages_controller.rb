@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def index
     @portfolio = [
       {
-        imgurl: "caffeinequest.png",
+        imgurl: "caffeinequest-min.png",
         header: "Caffeine Quest",
         description: "An 80s style text adventure that will test your Ruby knowledge",
         short: "caffeine",
@@ -10,7 +10,7 @@ class PagesController < ApplicationController
         urltext: "On GitHub"
       },
       {
-        imgurl: "portfolio.png",
+        imgurl: "portfolio-min.png",
         header: "Portfolio",
         description: "This page you're looking at. Inception! You can see the code on GitHub.",
         short: "port",
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
         urltext: "On GitHub"
       },
       {
-        imgurl: "csszen.jpg",
+        imgurl: "csszen-min.jpg",
         header: "CSS Zen Garden",
         description: "My design for CSS Zen Garden",
         short: "zen",
@@ -26,7 +26,7 @@ class PagesController < ApplicationController
         urltext: "On GitHub"
       },
       {
-        imgurl: "blog.png",
+        imgurl: "blog-min.png",
         header: "Blog",
         description: "I keep a blog of my code adventure",
         short: "blog",
@@ -34,7 +34,7 @@ class PagesController < ApplicationController
         urltext: "On GitHub Pages"
       },
       {
-        imgurl: "arduino.jpg",
+        imgurl: "arduino-min.jpg",
         header: "Arduino",
         description: "I play with Arduinos",
         short: "arduino",
@@ -45,11 +45,11 @@ class PagesController < ApplicationController
 
     @community = [
       {
-        imgurl: "GGD.jpg",
+        imgurl: "GGD-min.jpg",
         header: "Girl Geek Dinner Sydney",
       },
       {
-        imgurl: "WWCode_Logo.jpg",
+        imgurl: "WWCode_Logo-min.png",
         header: "Women Who Code",
       },
       {
@@ -57,11 +57,11 @@ class PagesController < ApplicationController
         header: "LCA 2017",
       },
       {
-        imgurl: "gopher.png",
+        imgurl: "gopher-min.png",
         header: "Go Sydney",
       },
       {
-        imgurl: "pyladies.jpg",
+        imgurl: "pyladies-min.jpg",
         header: "PyLadies Sydney",
       }
     ]
@@ -81,14 +81,14 @@ class PagesController < ApplicationController
 
     @speaking = [
       {
-        imgurl: "arduinotalk.png",
+        imgurl: "arduinotalk-min.png",
         title: "A Beginner's Guide to Arduino",
         conf: "Women Who Code Hack and Tell",
         year: "December 2016",
         description: "Arduino isn't scary - a talk to encourage women into arduino from the point of view of a beginner",
       },
       {
-        imgurl: "LCA.jpg",
+        imgurl: "LCA-min.jpg",
         title: "Hannah Gets Go-ing",
         conf: "WOOTConf miniconf at Linux Conf",
         year: "January 2017",
@@ -97,7 +97,7 @@ class PagesController < ApplicationController
         linkurl: "https://www.youtube.com/watch?v=m9U6YwJupfA"
       },
       {
-        imgurl: "hannahgetsgoing.png",
+        imgurl: "hannahgetsgoing-min.png",
         title: "Hannah Gets Go-ing",
         conf: "Girl Geek Dinners",
         year: "February 2017",
