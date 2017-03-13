@@ -47,22 +47,27 @@ class PagesController < ApplicationController
       {
         imgurl: "GGD-min.jpg",
         header: "Girl Geek Dinner Sydney",
+        url: "http://www.girlgeeksydney.com/"
       },
       {
         imgurl: "WWCode_Logo-min.png",
         header: "Women Who Code",
+        url: "https://www.meetup.com/en-AU/Women-Who-Code-Sydney/"
       },
       {
         imgurl: "tuz.svg",
         header: "LCA 2017",
+        url: "lca2017.linux.org.au"
       },
       {
         imgurl: "gopher-min.png",
         header: "Go Sydney",
+        url: "https://www.meetup.com/en-AU/golang-syd/"
       },
       {
         imgurl: "pyladies-min.jpg",
         header: "PyLadies Sydney",
+        url: "https://www.meetup.com/en-AU/Sydney-PyLadies/"
       }
     ]
 
@@ -128,7 +133,7 @@ class PagesController < ApplicationController
       },
       {
         linktext: "python-plain-wordmark",
-        ability: 60
+        ability: 50
       },
       {
         linktext: "sass-original",
